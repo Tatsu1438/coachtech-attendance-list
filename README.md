@@ -1,9 +1,5 @@
 # coachtech-attendance-list
 
-
-# coachtech-attendance-list
-
-
 ## サービス名
 
 coachtech勤怠管理アプリ
