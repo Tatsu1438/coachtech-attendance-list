@@ -214,6 +214,69 @@ URL:
 | updated_at              | timestamp      |             |            |          |                           |
 
 
+### Route / Controller
+
+| 画面名称 | パス | メソッド | ルート先コントローラー | アクション | 認証必須 | 説明 |
+|-----------|------|-----------|--------------------------|-------------|-----------|------|
+| 会員登録画面（一般ユーザー） | /register | GET / POST | RegisteredUserController | create | ○ | ユーザー情報登録画面 |
+| ログイン画面（一般ユーザー） | /login | GET / POST | AuthenticatedSessionController | store | × | ユーザーログイン画面 |
+| 出勤登録画面（一般ユーザー） | /user | GET / POST | UserController | index | ○ | ユーザー打刻画面 |
+| 勤怠一覧画面（一般ユーザー） | /user/list | GET | UserController | workList | ○ | ユーザー勤怠一覧画面 |
+| 勤怠詳細画面（一般ユーザー） | /user/list/detail/{id} | GET / PUT | UserController | userListDetail | ○ | 勤怠詳細画面 |
+| 申請一覧画面（一般ユーザー） | /user/request | GET / POST | UserController | userRequest | ○ | 勤怠修正申請画面 |
+| ログイン画面（管理者） | /admin/login | GET / POST | AdminLoginController | authenticate | × | 管理者ログイン画面 |
+| 勤怠一覧画面（管理者） | /admin/home | GET | AdministratorController | attendanceList | ○ | 全ユーザーの勤怠一覧表示画面 |
+| 勤怠詳細画面（管理者） | /admin/attendance/{id} | GET / POST | AdministratorController | listDetail | ○ | 全ユーザーの勤怠詳細画面 |
+| スタッフ一覧画面（管理者） | /admin/staff_list | GET | AdministratorController | staffList | ○ | スタッフ一覧画面 |
+| スタッフ別勤怠一覧画面（管理者） | /admin/staff_list/{id} | GET | AdministratorController | staffDetail | ○ | スタッフの月間勤怠情報画面 |
+| 申請一覧画面（管理者） | /admin/request_list | GET | AdministratorController | requestList | ○ | 全ユーザー勤怠申請一覧 |
+| 修正申請承認画面（管理者） | /admin/request_list/{id} | GET / PUT | WorkingStatusController | requestApprove | ○ | 修正承認画面 |
+
+---
+
+### Model
+
+| モデルファイル名 | 説明 |
+|------------------|------|
+| Admin.php | 管理者の情報を管理するモデル |
+| Attendance.php | 勤怠データを管理するモデル |
+| AttendanceRequest.php | 勤怠修正情報を管理するモデル |
+| User.php | ユーザー情報を管理するモデル |
+| AttendanceBreak.php | 休憩データを管理するモデル |
+| AttendanceRequestBreak.php | 休憩データの修正を管理するモデル |
+
+---
+
+### View
+
+| 画面名称 | bladeファイル名 |
+|-----------|----------------|
+| 会員登録画面（一般ユーザー） | user_register.blade.php |
+| ログイン画面（一般ユーザー） | user_login.blade.php |
+| 出勤登録画面（一般ユーザー） | stamping.blade.php |
+| 勤怠一覧画面（一般ユーザー） | work_list.blade.php |
+| 勤怠詳細画面（一般ユーザー） | work_list_detail.blade.php |
+| 申請一覧画面（一般ユーザー） | work_request.blade.php |
+| ログイン画面（管理者） | admin_login.blade.php |
+| 勤怠一覧画面（管理者） | attendance_list.blade.php |
+| 勤怠詳細画面（管理者） | attendance_detail.blade.php |
+| スタッフ一覧画面（管理者） | staff_list.blade.php |
+| スタッフ別勤怠一覧画面（管理者） | staff_detail.blade.php |
+| 申請一覧画面（管理者） | user_request.blade.php |
+| 修正申請承認画面（管理者） | approve.blade.php |
+
+---
+
+### バリデーション
+
+| バリデーションファイル名 | フォーム | ルール |
+|--------------------------|----------|--------|
+| AdminLoginRequest.php | 管理者ログインフォーム | メールアドレス：必須・パスワード：必須 |
+| UserLoginRequest.php | 一般ユーザーログインフォーム | メールアドレス：必須・パスワード：必須（8文字以上） |
+| UserRegisterRequest.php | 会員登録フォーム | 名前・メールアドレス：必須、パスワード：必須・重複禁止・8文字以上 |
+| AttendanceModifyRequest.php | 勤怠修正申請フォーム | 出退勤：必須・前後関係正しい、休憩：任意・時刻形式、備考：必須・255文字以内 |
+
+---
 　　
 
 
