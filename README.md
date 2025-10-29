@@ -136,6 +136,18 @@ URL:
 ![ER図](src/public/er_diagram.png)
 
 
+## テーブル一覧
+
+### testsテーブル
+
+| カラム名     | 型             | PRIMARY KEY | UNIQUE KEY | NOT NULL | FOREIGN KEY       |
+|-------------|----------------|-------------|------------|----------|-----------------|
+| id          | unsigned bigint| ○           |            | ○        |                 |
+| user_id     | unsigned bigint|             |            | ○        | users(id)        |
+| score       | integer        |             |            | ○        |                 |
+| created_at  | timestamp      |             |            |          |                 |
+| updated_at  | timestamp      |             |            |          |                 |
+
 
 
 
