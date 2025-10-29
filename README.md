@@ -125,11 +125,12 @@ URL:
     password: admin12345
 
 ・phpMyAdmin: http://localhost:8080/
+・mailhog: http://localhost:8025
    
 
 ## ER図
 
-![ER図](./public/)
+![ER図](./public/er_diagram.png)
 
 
 
