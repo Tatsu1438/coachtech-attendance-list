@@ -131,7 +131,8 @@ URL:
 
 ## ER図
 
-![ER図](public/er_diagram.png)
+
+![ER図](./er_diagram.png)
 
 
 
