@@ -138,18 +138,80 @@ URL:
 
 ## テーブル一覧
 
-### testsテーブル
+### usersテーブル
 
-| カラム名     | 型             | PRIMARY KEY | UNIQUE KEY | NOT NULL | FOREIGN KEY       |
-|-------------|----------------|-------------|------------|----------|-----------------|
-| id          | unsigned bigint| ○           |            | ○        |                 |
-| user_id     | unsigned bigint|             |            | ○        | users(id)        |
-| score       | integer        |             |            | ○        |                 |
-| created_at  | timestamp      |             |            |          |                 |
-| updated_at  | timestamp      |             |            |          |                 |
+| カラム名                  | 型             | PRIMARY KEY | UNIQUE KEY | NOT NULL | FOREIGN KEY |
+|---------------------------|----------------|-------------|------------|----------|-------------|
+| id                        | unsigned bigint| ○           |            | ○        |             |
+| user_name                 | varchar(255)   |             |            | ○        |             |
+| email                     | varchar(255)   |             | ○          | ○        |             |
+| password                  | varchar(255)   |             |            | ○        |             |
+| status                    | varchar(255)   |             |            | ○        |             |
+| email_verified_at         | timestamp      |             |            | ○        |             |
+| two_factor_secret         | varchar(255)   |             |            |          |             |
+| two_factor_recovery_codes | text           |             |            |          |             |
+| two_factor_confirmed_at   | timestamp      |             |            |          |             |
+| remember_token            | varchar(100)   |             |            |          |             |
+| created_at                | timestamp      |             |            |          |             |
+| updated_at                | timestamp      |             |            |          |             |
 
+### attendancesテーブル
 
+| カラム名        | 型             | PRIMARY KEY | UNIQUE KEY | NOT NULL | FOREIGN KEY |
+|-----------------|----------------|-------------|------------|----------|-------------|
+| id              | unsigned bigint| ○           |            | ○        |             |
+| user_id         | unsigned bigint|             |            | ○        | users(id)   |
+| work_date       | date           |             |            | ○        |             |
+| clock_in        | time           |             |            |          |             |
+| clock_out       | time           |             |            |          |             |
+| break_start     | time           |             |            |          |             |
+| break_end       | time           |             |            |          |             |
+| break_time      | time           |             |            |          |             |
+| total_time      | time           |             |            |          |             |
+| created_at      | timestamp      |             |            |          |             |
+| updated_at      | timestamp      |             |            |          |             |
+| request_status  | varchar(255)   |             |            | ○        |             |
+| request_reason  | text           |             |            |          |             |
 
+### attendance_requestsテーブル
+
+| カラム名        | 型             | PRIMARY KEY | UNIQUE KEY | NOT NULL | FOREIGN KEY        |
+|-----------------|----------------|-------------|------------|----------|-------------------|
+| id              | unsigned bigint| ○           |            | ○        |                   |
+| attendance_id   | unsigned bigint|             |            | ○        | attendances(id)   |
+| user_id         | unsigned bigint|             |            | ○        | users(id)         |
+| clock_in        | time           |             |            |          |                   |
+| clock_out       | time           |             |            |          |                   |
+| break_start     | integer        |             |            |          |                   |
+| break_end       | integer        |             |            |          |                   |
+| request_reason  | string         |             |            |          |                   |
+| created_at      | timestamp      |             |            |          |                   |
+| updated_at      | timestamp      |             |            |          |                   |
+| request_status  | varchar(255)   |             |            | ○        |                   |
+
+### breaksテーブル
+
+| カラム名        | 型             | PRIMARY KEY | UNIQUE KEY | NOT NULL | FOREIGN KEY      |
+|-----------------|----------------|-------------|------------|----------|-----------------|
+| id              | unsigned bigint| ○           |            | ○        |                 |
+| attendance_id   | unsigned bigint|             |            | ○        | attendances(id) |
+| break_start     | time           |             |            |          |                 |
+| break_end       | time           |             |            |          |                 |
+| break_number    | int            |             |            |          |                 |
+| created_at      | timestamp      |             |            |          |                 |
+| updated_at      | timestamp      |             |            |          |                 |
+
+### attendance_request_breaksテーブル
+
+| カラム名                | 型             | PRIMARY KEY | UNIQUE KEY | NOT NULL | FOREIGN KEY               |
+|-------------------------|----------------|-------------|------------|----------|---------------------------|
+| id                      | unsigned bigint| ○           |            | ○        |                           |
+| attendance_requests_id  | unsigned bigint|             |            | ○        | attendance_requests(id)  |
+| break_number            | int            |             | ○          |          |                           |
+| break_start             | time           |             |            |          |                           |
+| break_end               | time           |             |            |          |                           |
+| created_at              | timestamp      |             |            |          |                           |
+| updated_at              | timestamp      |             |            |          |                           |
 
 
 　　
