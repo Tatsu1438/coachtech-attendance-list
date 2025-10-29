@@ -123,10 +123,12 @@ URL:
 ・管理者ログイン: http://localhost/admin/login
 
   管理者ログイン情報
+  
     email: admin@example.com
     password: admin12345
 
 管理者ログイン情報
+
     user_name: サンプル太郎
 	email: sample@example.com
     password: sample12345
