@@ -126,6 +126,11 @@ URL:
     email: admin@example.com
     password: admin12345
 
+管理者ログイン情報
+    user_name: サンプル太郎
+	email: sample@example.com
+    password: sample12345
+
 ・phpMyAdmin: http://localhost:8080/
 
 ・mailhog: http://localhost:8025
