@@ -100,13 +100,15 @@ coachtech勤怠管理アプリ
 
 ## 使用技術（実行環境）
 
-PHP:
+php:8.1-fpm
 
 mysql:8.0
 
-nginx:
+nginx:1.21.1
 
-Laravel:8.x
+Laravel:8.x（バージョン 8.75 以降互換）
+
+mailhog
 
 ## 開発環境
 
