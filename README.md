@@ -131,12 +131,7 @@ URL:
 
 ## ER図
 
-
-## ER図
-
-## ER図
-
-![ER図](https://github.com/Tatsu1438/coachtech-attendance-list/blob/main/src/public/png/er_diagram.png?raw=true)
+![ER図](src/public/er_diagram.png)
 
 
 
