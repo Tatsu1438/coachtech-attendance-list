@@ -1,0 +1,130 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #F0EFF2;
+}
+
+.request-list {
+    width: 900px;
+    height: auto;
+
+    margin-top: 100px;
+    margin-bottom: 300px;
+
+}
+
+.title-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.request {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.line-1 {
+    width: 0px;
+    height: 40px;
+    border: 8px solid #000000;
+}
+
+.line-2 {
+    width: 900px;
+    height: 0px;
+    margin-bottom: 50px;
+
+    border: 1px solid #000000;
+}
+
+.approve-wait {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+    margin-left: 80px;
+
+
+}
+
+.approve-done {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+    margin-left: 80px;
+
+}
+
+.approve-btn {
+    display: flex;
+    padding: 40px 0px 20px 0px;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+th {
+    border-bottom: 3px solid #E1E1E1
+}
+
+td {
+    text-align: center;
+    border-bottom: 2px solid #E1E1E1
+}
+
+th,
+td {
+    padding: 20px 0px 20px 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+    vertical-align: middle;
+
+    color: #737373;
+}
+
+.approve-btn button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+    margin-left: 80px;
+    color: #737373;
+    transition: color 0.2s, font-weight 0.2s, border-bottom 0.2s;
+}
+
+
+.approve-wait.active,
+.approve-done.active {
+    color: #000000;
+    font-weight: 700;
+}

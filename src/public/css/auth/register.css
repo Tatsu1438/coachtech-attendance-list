@@ -1,0 +1,96 @@
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+}
+
+.input-box {
+    height: auto;
+    display: flex;
+    margin-bottom: 300px;
+    justify-content: center;
+
+}
+
+.user-name-input-box {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mail-input-box {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.password-input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.password-confirm-input-box {
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+
+    color: #000000;
+}
+
+input {
+    box-sizing: border-box;
+    width: 680px;
+    height: 60px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 680px;
+    height: 60px;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.login-btn {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #0073CC;
+    margin-top: 30px;
+}

@@ -1,0 +1,254 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #F0EFF2;
+}
+
+.attendance-list {
+    width: 900px;
+    height: auto;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+
+}
+
+.date-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.line-1 {
+    width: 0px;
+    height: 40px;
+    border: 8px solid #000000;
+}
+
+.date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.date-select {
+    width: 900px;
+    height: 60px;
+    margin-top: 50px;
+    background: #FFFFFF;
+    border-radius: 10px;
+
+}
+
+.date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 40px;
+
+
+}
+
+.date-select {
+    width: 100%;
+    height: 60px;
+    margin-top: 50px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.date-select-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+
+    color: #737373;
+}
+
+.previous-month-btn {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+    border: none;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #737373;
+
+}
+
+.next-month-btn {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+    border: none;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    display: flex;
+    align-items: center;
+    color: #737373;
+
+}
+
+.date-and-calendar {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.select-date-box {
+    display: flex;
+    align-items: center;
+}
+
+.select-date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    border: no;
+
+    color: #000000;
+}
+
+.calendar-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-right: 6px;
+}
+
+.btn-icon-next {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    transform: scaleX(-1);
+    margin-left: 6px;
+}
+
+
+
+.table-box {
+    width: 900px;
+    height: auto;
+    margin-top: 50px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    table-layout: fixed;
+}
+
+th {
+    text-align: center;
+    border-bottom: 3px solid #E1E1E1
+}
+
+tr {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+    text-align: center;
+
+    color: #737373;
+}
+
+td {
+    border-bottom: 2px solid #E1E1E1
+
+}
+
+th,
+td {
+    padding: 20px 20px 20px 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+
+    color: #737373;
+}
+
+.submit-btn-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+
+.csv-btn {
+    width: 130px;
+    height: 50px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.15em;
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+
+
