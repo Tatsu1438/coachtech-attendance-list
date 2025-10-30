@@ -36,6 +36,7 @@ coachtech勤怠管理アプリ
 
 ## Dockerビルド
 
+	1. 任意のディレクトリを作成
     1. git clone git@github.com:Tatsu1438/coachtech-freemarket.git
     2. cd coachtech-freemarket
     3. DockerDesktopアプリを立ち上げる
