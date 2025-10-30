@@ -38,7 +38,7 @@ class AttendanceModifyRequest extends FormRequest
 
             'break_start.before' => '休憩時間が不適切な値です',
             'break_end.after' => '休憩時間もしくは退勤時間が不適切な値です',
-            'break_end.before' => '休憩終了時間が退勤時間より後になっています',
+            'break_end.before' => '休憩時間もしくは退勤時間が不適切な値です',
             'break_start.date_format' => '休憩開始時間の形式が不正です（例:12:00）',
             'break_end.date_format' => '休憩終了時間の形式が不正です（例:13:00）',
 
