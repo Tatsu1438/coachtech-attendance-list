@@ -54,22 +54,32 @@ coachtech勤怠管理アプリ
     環境変数を以下に変更
 	cp .env.example .env
 	
-	mysql:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: laravel_db
-      MYSQL_USER: laravel_user
-      MYSQL_PASSWORD: laravel_pass
+	MAIL_MAILER=smtp
+	MAIL_HOST=mailhog
+	MAIL_PORT=1025
+	MAIL_USERNAME=null
+	MAIL_PASSWORD=null
+	MAIL_ENCRYPTION=null
+	MAIL_FROM_ADDRESS=admin@example.com
+	MAIL_FROM_NAME="${APP_NAME}"
+
+	DB_CONNECTION=mysql
+	DB_HOST=coachtech-attendance-mysql
+	DB_PORT=3306
+	DB_DATABASE=laravel_db
+	DB_USERNAME=laravel_user
+	DB_PASSWORD=laravel_pass
+
+	ADMIN_EMAIL=admin@example.com
+	ADMIN_PASSWORD=admin12345
 
 
-    mysql_test:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: laravel_test_db
-      MYSQL_USER: laravel_user
-      MYSQL_PASSWORD: laravel_pass
+    DB_CONNECTION=mysql
+	DB_HOST=mysql_test
+	DB_PORT=3306
+	DB_DATABASE=laravel_test_db
+	DB_USERNAME=laravel_user
+	DB_PASSWORD=laravel_pass
 
 ## アプリケーションキーの作成
 
