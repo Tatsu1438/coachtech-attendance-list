@@ -151,3 +151,16 @@ button {
 
     color: #000000;
 }
+
+
+.work-end-message {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: #000000;
+}

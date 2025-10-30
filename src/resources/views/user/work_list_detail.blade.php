@@ -45,10 +45,10 @@
                         </div>
                         <div>
                             @error('clock_in')
-                                <div class="error-text">{{ $message }}</div>
+                                <div class="error-text-top">{{ $message }}</div>
                             @enderror
                             @error('clock_out')
-                                <div class="error-text">{{ $message }}</div>
+                                <div class="error-text-bottom">{{ $message }}</div>
                             @enderror
                         </div>
                     </td>
@@ -67,10 +67,10 @@
                         </div>
                         <div>
                             @error('break_start')
-                                <div class="error-text">{{ $message }}</div>
+                                <div class="error-text-top">{{ $message }}</div>
                             @enderror
                             @error('break_end')
-                                <div class="error-text">{{ $message }}</div>
+                                <div class="error-text-bottom">{{ $message }}</div>
                             @enderror
                         </div>
                     </td>
@@ -97,6 +97,14 @@
                                         value="{{ $break?->break_end ? \Carbon\Carbon::parse($break->break_end)->format('H:i') : '' }}">
                                 @endif
                             </div>
+                            <div>
+                                @error('break_start')
+                                    <div class="error-text-top">{{ $message }}</div>
+                                @enderror
+                                @error('break_end')
+                                    <div class="error-text-bottom">{{ $message }}</div>
+                                @enderror
+                            </div>
                         </td>
                     </tr>
                 @endforeach
@@ -110,7 +118,7 @@
                         @endif
                         <div>
                             @error('request_reason')
-                                <div class="error-text">{{ $message }}</div>
+                                <div class="error-text-top">{{ $message }}</div>
                             @enderror
                         </div>
                     </td>

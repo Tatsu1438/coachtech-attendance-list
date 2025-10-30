@@ -188,3 +188,15 @@ button {
     background-color: #000000;
     color: #FFFFFF;
 }
+
+.error-text-top {
+    color: red;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.error-text-bottom {
+    color: red;
+    margin-top: 2px;
+    font-size: small;
+}

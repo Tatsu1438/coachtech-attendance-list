@@ -25,8 +25,16 @@ main {
 
 }
 
-.error {
+.error-text-top {
     color: red;
+    margin-top: 20px;
+    font-size: small;
+}
+
+.error-text-bottom {
+    color: red;
+    margin-top: 5px;
+    font-size: small;
 }
 
 .detail {

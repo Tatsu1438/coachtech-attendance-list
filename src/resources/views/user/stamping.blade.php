@@ -43,7 +43,7 @@
             </form>
 
             @elseif($status === '退勤済')
-                <p>お疲れさまでした。</p>
+                <p class="work-end-message">お疲れさまでした。</p>
             @endif
         </div>
     </div>
