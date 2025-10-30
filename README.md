@@ -83,6 +83,8 @@ coachtech勤怠管理アプリ
 
 ## アプリケーションキーの作成
 
+	docker-compose exec php bash
+
 	php artisan key:generate
 
 	php artisan config:clear
@@ -125,13 +127,17 @@ mailhog
 
 URL:
 
-・画面: http://localhost/
+・ユーザー登録: 
 
-・ユーザー登録: http://localhost/register
+	http://localhost/register
 
-・ユーザーログイン: http://localhost/login
+・ユーザーログイン: 
 
-・管理者ログイン: http://localhost/admin/login
+	http://localhost/login
+
+・管理者ログイン: 
+
+	http://localhost/admin/login
 
   管理者ログイン情報
   
