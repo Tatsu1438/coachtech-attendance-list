@@ -73,6 +73,7 @@ coachtech勤怠管理アプリ
 	ADMIN_EMAIL=admin@example.com
 	ADMIN_PASSWORD=admin12345
 
+.env.testingが以下であることを確認
 
     DB_CONNECTION=mysql
 	DB_HOST=mysql_test
